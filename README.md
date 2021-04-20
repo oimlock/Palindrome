@@ -10,7 +10,7 @@ In this project proceed folowing secuence of operations:
 |2. Reverse it| B = 32|
 |3. Add to the initial one|A + B = 55|
 |4. Check if it is a palindromic number|YES|
-|  5.1. If it is -> 	executing stop, we get a palindromic number|55|
+|  5.1. If it is -> 	executing stop, we have got a palindromic number|55|
 |  5.2. If it is not -> back to the step 1. |-|
 | ----------- | ----------- |
 
