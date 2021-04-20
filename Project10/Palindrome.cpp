@@ -12,17 +12,25 @@ using std::endl;
 
 namespace oimlock {
 
-    Palindrome::Palindrome(unsigned long long n) : n_(n), counter_(1) {}
+Palindrome::Palindrome(unsigned long long n) : n_(n), counter_(1), initial_n_ (n) {}
 
-void Palindrome::start() {
+void Palindrome::solve() {
     divide(n_);
     unsigned long long m = compose();
     cout << std::setw(2) << std::setfill('0')
         << counter_ << "  " << n_ << " + " << m << " = " << n_ + m << endl;
     n_ += m;
     ++counter_;
+    if (counter_ == 3501) {
+        cout << "\n<< The Palindromic number of " << initial_n_  
+            << " after 3500 itterations has not been found\n";
+        return;
+    }
     if (!is_palindrome()) {
-        start();
+        solve();
+    }
+    else {
+        show_answer();
     }
 }
 
@@ -60,6 +68,11 @@ unsigned long long Palindrome::divide(unsigned long long n) {
     return divide(n / 10);
 }
 
+void Palindrome::show_answer() {
+    cout << "\n<< The Palindrom of " << initial_n_ << " is ";
+    cout << out() << "\n\n";
+}
+
 void show_display() {
     cout <<
         "- Insert any number to get its palindromic number \n"
@@ -67,12 +80,6 @@ void show_display() {
         "- Insert '1' to clear the screen\n"
         "--------------------------------------------------------\n"
         ">> ";
-}
-
-void show_answer(Palindrome p, unsigned long long n) {
-    cout << "\n << The polyndrom of" << ' ' << n;
-    cout << " is ";
-    cout << p.out() << "\n\n";
 }
 
 }
