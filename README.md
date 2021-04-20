@@ -14,15 +14,15 @@ In this project proceed folowing secuence of operations:
 |  5.2. If it is not -> back to the step 1. |-|
 | ----------- | ----------- |
 
-## Examples
-A = 351; 
-B = 153;  
-351 + 153 = 504;  
-NO  
-A = 504  
-B = 405   
-504 + 405 = 909;  
-YES  
+## Examples  
+A = 351;    
+B = 153;    
+351 + 153 = 504;    
+NO    
+A = 504    
+B = 405     
+504 + 405 = 909;    
+YES    
 
 Input 687;  
 Itterations:  
