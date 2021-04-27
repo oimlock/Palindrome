@@ -17,15 +17,19 @@ int main() {
         cin >> n;
         auto t1 = std::chrono::high_resolution_clock::now(); // timer on
         cout << endl;
-        if (n == 0) {
+
+        switch (n) {
+        case 0:
             cout << "Exit\n";
             return 0;
-        }
-        if (n == 1) {
+        case 1:
             system("cls");
             ++k;
             continue;
+        default:
+            break;
         }
+
         cout << "Itterations: \n";
         oimlock::Palindrome p(n);
         p.solve();
